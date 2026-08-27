@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ER-99 Drum Synth</title>
+    <link href="style.css" rel="stylesheet" type="text/css" /> 
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+	<meta name="description" content="Extralife Instruments ER-99 drum synth is a virtual analog instrument  based on classic 80s drum machines that you can play in your browser." />
+	<link rel="canonical" href="https://extralifeinstruments.com/er-99/" />
+	<meta property="og:locale" content="en_ES" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Extralife Instruments ER-99 Web Drum Synthesizer " />
+	<meta property="og:description" content="Extralife Instruments ER-99 drum synth is a virtual analog instrument  based on classic 80s drum machines that you can play in your browser.." />
+	<meta property="og:url" content="https://www.gearnews.com/celebrate-909-day-with-a-virtual-er-99-rhythm-machine-in-your-browser/" />
+	<meta property="og:site_name" content="Extralife Instruments" />
+	<meta property="article:publisher" content="https://www.facebook.com/extralifedisco/" />
+	<meta property="article:published_time" content="2022-09-09T09:09:09+08:00" />
+	<meta property="og:image" content="https://extralifeinstruments.com/images/product/er-99-web.jpg" />
+	<meta property="og:image:width" content="1540" />
+	<meta property="og:image:height" content="850" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Matthew Cieplak" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@extralifedisco" />
+
+
+    <script type="text/javascript" src="lib/noise.js"></script>
+    <!-- <script type="text/javascript" src="js/instruments.js"></script>
+    <script type="text/javascript" src="js/sampler.js"></script>
+    <script type="text/javascript" src="js/generator.js"></script>
+    <script type="text/javascript" src="js/instrument.js"></script>
+    <script type="text/javascript" src="js/sequencer.js"></script>
+    <script type="text/javascript" src="js/presets.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
+    <script type="text/javascript" src="js/index.js"></script> -->
+    <script type="text/javascript" src="js/build.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="bg"></div>
+        <div class="header">
+            <h3 id="logotype" class="left"><img src="img/logotype-transparent-300.png" class="logo" alt="Extralife Instruments" width="300"></h3>
+
+            <div class="clear"></div>
+        </div>
+
+        <div style="clear:both;"></div>
+
+        <div id="sequencer" class="clear">
+            <div class="sequencer_button" data-step="1" id="sequencer_button_1"><span class="squareled"></span><span class="number">1</span></div>
+            <div class="sequencer_button" data-step="2" id="sequencer_button_2"><span class="squareled"></span><span class="number">2</span></div>
+            <div class="sequencer_button" data-step="3" id="sequencer_button_3"><span class="squareled"></span><span class="number">3</span></div>
+            <div class="sequencer_button" data-step="4" id="sequencer_button_4"><span class="squareled"></span><span class="number">4</span></div>
+            <div class="sequencer_button" data-step="5" id="sequencer_button_5"><span class="squareled"></span><span class="number">5</span></div>
+            <div class="sequencer_button" data-step="6" id="sequencer_button_6"><span class="squareled"></span><span class="number">6</span></div>
+            <div class="sequencer_button" data-step="7" id="sequencer_button_7"><span class="squareled"></span><span class="number">7</span></div>
+            <div class="sequencer_button" data-step="8" id="sequencer_button_8"><span class="squareled"></span><span class="number">8</span></div>
+            <div class="sequencer_button" data-step="9" id="sequencer_button_9"><span class="squareled"></span><span class="number">9</span></div>
+            <div class="sequencer_button" data-step="10" id="sequencer_button_10"><span class="squareled"></span><span class="number">10</span></div>
+            <div class="sequencer_button" data-step="11" id="sequencer_button_11"><span class="squareled"></span><span class="number">11</span></div>
+            <div class="sequencer_button" data-step="12" id="sequencer_button_12"><span class="squareled"></span><span class="number">12</span></div>
+            <div class="sequencer_button" data-step="13" id="sequencer_button_13"><span class="squareled"></span><span class="number">13</span></div>
+            <div class="sequencer_button" data-step="14" id="sequencer_button_14"><span class="squareled"></span><span class="number">14</span></div>
+            <div class="sequencer_button" data-step="15" id="sequencer_button_15"><span class="squareled"></span><span class="number">15</span></div>
+            <div class="sequencer_button" data-step="16" id="sequencer_button_16"><span class="squareled"></span><span class="number">16</span></div>
+        </div>
+
+        <div style="clear: both;"></div>
+
+        <p>Press the 0-9 keys or NUMPAD keys to play the drums.</p>
+
+        <div style="clear: both;"></div>
+    </div>
+    <div class="postscript">
+
+        
+        <div class="column">
+            <h3 class="left">Sound Presets</h3>
+            <button id="save_preset" class="simple_button">Save</button> 
+
+            <textarea id="preset_text" style="display: none;">JSON HERE</textarea>
+            <ul id="preset_list" class="preset_list clear"></ul>
+        </div>
+
+        <div class="column">
+            <h3 class="left">Sequences</h3>
+            <button id="save_sequence" class="simple_button">Save</button> 
+
+            <textarea id="sequence_text" style="display: none;">JSON HERE</textarea>
+            <ul id="sequence_list" class="preset_list clear"></ul>
+        </div>
+
+        <div class="column flexcolumn">
+            <h3>What Is ER-99?</h3>
+            <p><strong>ER-99</strong> is a web-based instrument <code>🎛️</code> based on a famous Japanese drum machine from the 1980s. It was built to celebrate 9/09 day 2022 🎉!
+            <p>All of the drums are synthesized using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API" target="_blank">WebAudio API</a>. The hi-hats, crash, and ride cymbals are produced from sampled audio.
+            <p>The complete source code is <a href="https://github.com/matthewcieplak/er-99" target="_blank">available on Github</a>.</p>
+        </div>
+
+        <hr class="hidden-xs hidden-sm hidden-md"/>
+
+
+        <div class="clear column doublecolumn">
+            <h3>How do I play?</h3>
+            <p>You can play the drums by pressing the number buttons on your keyboard. Turn the knobs to change the sound of each instrument. </p>
+            
+            <p>The 16 buttons at the bottom show the sequence for each instrument. Click once to activate a step, and click again to add an accent (indicated by a brighter light). The emphasis of the accented notes is controlled by the "Accent" knob. You can make 64-step sequences by using the BARS buttons to edit subsequent pages.</p>
+
+            <p>You can store Sequences and Sound Presets using the menus above. These are stored in your browser's memory and will be recalled the next time you visit (on this computer).</p>
+
+        </div>
+
+        <div class="column doublecolumn">
+            <p><!--iframe width="560" height="315" src="https://www.youtube.com/embed/3-Zrz8xg-ms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p-->
+        </div>
+
+        <hr class="hidden-xs hidden-sm hidden-md">
+
+        <div class="clear column doublecolumn">
+            <h3>Who made this?</h3>
+            <p>Hello! My name is <a href="https://matthewcieplak.com" target="_blank">Matthew Cieplak</a>, and I'm known online as <a href="https://youtube.com/c/extralifedisco" target="_blank">Extralife</a>. 
+            I make <a href="https://soundcloud.com/extralifedisco">music</a>, <a href="https://youtube.com/c/extralifedisco">youtube videos</a>, and <a href="https://store.extralifeinstruments.com">synthesizer modules</a>.
+            You can follow me on <a href="https://instagram.com/extralifedisco" target="_blank">Instagram</a>, <a href="https://twitter.com/extralifedisco" target="_blank">Twitter</a>, and <a href="https://github.com/matthewcieplak">Github</a>.
+
+            <p>If you like this project, you can support me on <a href="https://patreon.com/extralife">Patreon</a> to help me keep building new instruments. Thanks!</p>
+        </div>
+        <p style="text-align: center; clear: both; padding: 100px 0 50px;">&copy; Extralife Instruments 2022</p>
+        
+    </div>
+<div class="clear">&nbsp;</div>
+</body>
+</html>
