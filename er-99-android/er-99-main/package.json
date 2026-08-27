@@ -1,0 +1,19 @@
+{
+  "name": "er-99",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ER-99 virtual analog drum machine",
+  "scripts": {
+    "build:web": "bash mobile/build-web.sh",
+    "android:add": "npm run build:web && npx cap add android",
+    "android:sync": "npm run build:web && npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/core": "^7.4.4",
+    "zepto": "^1.2.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.4"
+  }
+}
